@@ -1,0 +1,22 @@
+# Core ML / embeddings
+torch
+transformers
+sentence-transformers
+datasets
+scikit-learn
+numpy
+pandas
+
+# Backend API
+fastapi
+uvicorn[standard]
+pydantic
+
+# Database
+sqlalchemy
+psycopg2-binary   # use PyMySQL/mysqlclient instead if using MySQL
+redis
+
+# Utilities
+python-dotenv
+tqdm
