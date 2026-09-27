@@ -19,4 +19,3 @@ train_df.to_csv("data/processed/train_split.csv", index=False)
 val_df.to_csv("data/processed/val_split.csv", index=False)
 test_df.to_csv("data/processed/test_split.csv", index=False)
 
-print(f"Train: {len(train_df)}, Val: {len(val_df)}, Test: {len(test_df)}")
