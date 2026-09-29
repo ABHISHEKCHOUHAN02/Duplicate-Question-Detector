@@ -37,7 +37,7 @@ env/
 ENV/
 
 # Jupyter / Colab checkpoints
-.ipynb_checkpoints/
+
 
 # --- Testing / coverage ---
 .pytest_cache/
