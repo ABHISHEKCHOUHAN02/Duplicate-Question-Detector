@@ -27,7 +27,7 @@ from src.search.lsh_index import LSHIndex
 # From Phase 4 / Phase 5 tuning (see RESULTS.md).
 NUM_TABLES = 32
 HASH_SIZE = 12
-SIMILARITY_THRESHOLD = 0.80
+SIMILARITY_THRESHOLD = 0.60
 TOP_K = 10
 
 

@@ -1,7 +1,7 @@
 # Core ML / embeddings
 torch
 transformers
-sentence-transformers
+sentence-transformers==5.7.0
 datasets
 scikit-learn
 numpy

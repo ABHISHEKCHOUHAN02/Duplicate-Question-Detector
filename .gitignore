@@ -1,11 +1,18 @@
-# --- Data & models (large / regenerable, don't commit) ---
+# --- Data (large / regenerable, don't commit) ---
 data/raw/
 data/processed/
 data/embeddings/
+data/finetuned_sbert/          # or models/finetuned_sbert/ if you moved it there
 models/
-data/finetuned_sbert
+checkpoints/
+
+# --- Results (regenerate via scripts/, don't need to be in git) ---
 results/
-duplicate_questions.db/
+
+# --- Databases ---
+*.db
+*.sqlite
+*.sqlite3
 
 # --- Environment / secrets ---
 .env
@@ -40,7 +47,7 @@ env/
 ENV/
 
 # Jupyter / Colab checkpoints
-
+.ipynb_checkpoints/
 
 # --- Testing / coverage ---
 .pytest_cache/

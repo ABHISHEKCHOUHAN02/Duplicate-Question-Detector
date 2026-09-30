@@ -7,17 +7,19 @@ in Phase 2. The model is loaded once (singleton) and reused across requests.
 """
 
 import numpy as np
+from sentence_transformers import SentenceTransformer
 
 _MODEL = None
-MODEL_NAME = "all-MiniLM-L6-v2"   # must match the model used in Phase 2 embeddings
+finetuned_model = r"D:\vscode\ML\Duplicate Question Detector\data\finetuned_sbert"
 EMBEDDING_DIM = 384
-
+import os
+assert os.path.isdir(finetuned_model), f"Not found: {finetuned_model}"
 
 def _get_model():
     global _MODEL
     if _MODEL is None:
-        from sentence_transformers import SentenceTransformer  # imported lazily so
-        _MODEL = SentenceTransformer(MODEL_NAME)                # tests can skip this
+         # imported lazily so
+        _MODEL = SentenceTransformer(finetuned_model)                # tests can skip this
     return _MODEL
 
 
