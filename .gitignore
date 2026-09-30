@@ -3,6 +3,9 @@ data/raw/
 data/processed/
 data/embeddings/
 models/
+data/finetuned_sbert
+results/
+duplicate_questions.db/
 
 # --- Environment / secrets ---
 .env
