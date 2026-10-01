@@ -40,6 +40,18 @@ def create_question(payload: QuestionCreate, request: Request, db: Session = Dep
     )
 
 
+@router.get("", response_model=list[QuestionRead])
+def list_questions(skip: int = 0, limit: int = 50, db: Session = Depends(get_db)):
+    """All questions, most recently added first. Use skip/limit to page through them."""
+    return (
+        db.query(Question)
+        .order_by(Question.id.desc())
+        .offset(skip)
+        .limit(limit)
+        .all()
+    )
+
+
 @router.get("/{question_id}", response_model=QuestionRead)
 def get_question(question_id: int, db: Session = Depends(get_db)):
     row = db.get(Question, question_id)
